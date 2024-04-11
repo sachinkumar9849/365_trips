@@ -1,0 +1,453 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* css start  */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+section.slider_home {
+  margin-top: -153px;
+  z-index: -1;
+  position: relative;
+}
+
+section.slider_home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000a3;
+  z-index: 9;
+}
+.top_header li,
+.top_header p {
+  color: #e0e0e0;
+}
+body {
+  font-size: 15px;
+}
+nav.home_nav {
+  background: #57585be8;
+  padding: 18px 0;
+}
+.carousel-item.active {
+  background-size: cover;
+  background-position: bottom;
+}
+.padding_y {
+  padding: 100px 0;
+}
+/* search start  */
+button.header_search svg {
+  margin-right: 22px;
+  border: 1px solid white;
+  border-radius: 50px;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+}
+input.search_input {
+  width: 96%;
+}
+.search_popup {
+  min-width: 800px;
+}
+input.search_input:focus-visible {
+  border: 0 !important;
+  box-shadow: 0 !important;
+  outline: 0 !important;
+}
+
+/* section title  */
+/* .section_title h6 {
+  color: #ff001f;
+}
+.section_title h6::before ,.section_title h6::after{
+  position: absolute;
+  content: "";
+ 
+  
+  height: 2px;
+  background: red;
+}
+.section_title h6::before {
+  width: 34px;
+  top: 6px;
+  left: -43px;
+ 
+}
+.section_title h6::after{
+  width: 52px;
+  top: 15px;
+  left: -61px;
+} */
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Style 7
+   ----------------------------- */
+
+.seven h1:after,
+.seven h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #ff001f;
+  border-top: 1px solid #ff001f;
+  height: 5px;
+  background-color: #f8f8f8;
+}
+
+/* ------- Helper Styles -------------*/
+.seven h1 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ff001f;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.seven {
+  position: relative;
+  width: 87%;
+  max-width: 350px;
+}
+
+.section_title {
+  margin-bottom: 40px;
+}
+
+/* tour card  */
+.card_content {
+  width: 93%;
+  margin: 0 auto;
+  margin-top: -29px;
+  z-index: 99;
+  position: relative;
+  padding: 33px;
+}
+.tour_price h4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #ff001f;
+  width: 79px;
+  height: 79px;
+  border-radius: 50px;
+  border: 5px solid white;
+  margin: 0 auto;
+  margin-top: -74px;
+  margin-bottom: 16px;
+}
+.card_img img {
+  min-height: 307px;
+  object-fit: cover;
+  max-height: 307px;
+}
+.process_icon img {
+  width: 81px;
+  margin: 0 auto;
+}
+/* process  */
+.process_wrap {
+  min-height: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 51px;
+}
+.process_wrap .tour_price h4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #ff001f;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: unset;
+  position: absolute;
+  top: 63px;
+}
+.process_text h3 {
+  font-size: 21px;
+}
+.app_title .mx-auto.max-w-7xl.lg\:px-0.md\:px-8.px-5.text-center {
+  text-align: left;
+}
+.app_title .section_title {
+  width: 59%;
+}
+section.app_bg {
+  background-image: url(https://html.kodesolution.com/2024/taxix-html/images/background/3.jpg);
+  padding-bottom: 0;
+}
+.app_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000f0;
+}
+section.app_bg .section_title h1 {
+  color: white;
+}
+.app_mobile-img img {
+  margin-bottom: -200px;
+}
+.blog_main-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000082;
+}
+.blog_sub .blog_img ,.blog_sub-text{
+  width: 48%;
+}
+.blog_sub-text h4 {
+  align-items: center;
+}
+.blog_main-img img {
+  min-height: 432px;
+  max-height: 432px;
+}
+.blog_img img {
+  max-height: 200px;
+  min-height: 200px;
+
+}
+footer .f-title {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ff001f;
+  display: inline-block;
+}
+.f-title h5 {
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 11px;
+  font-size: 20px;
+}
+footer.footer-img {
+
+  padding: 100px;
+  padding-bottom: 0;
+}
+footer .f-links li a, footer .f-links li {
+  color: #fff;
+  transition: .5s;
+}
+
+footer .f-links li {
+  font-size: 16px;
+ 
+  margin-bottom: 15px;
+}
+.footer_bg {
+  background-color: #ff001f;
+}
+ul.f-social svg {
+  font-size: 42px;
+  margin-right: 22px;
+}
+img.logo_img {
+  margin-top: -67px;
+  border-bottom-right-radius: 15px;
+}
+footer.footer-img.relative {
+  background-image: url(https://www.shutterstock.com/image-vector/car-luggage-on-roof-drive-260nw-2115319028.jpg);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+footer.footer-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000e8;
+}
+
+button::-moz-focus-inner {
+  border: 0
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff2e2e;
+  border-radius: 50px;
+}
+.login_img img {
+  width: 54px;
+  border-radius: 50px;
+}
+
+/* booking form  */
+.booking_form-wraps {
+  top: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+}
