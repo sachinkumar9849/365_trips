@@ -23,14 +23,14 @@ const Home = ({ title, subDescription }) => {
       <Head>
         <title>Home page</title> {/* Set the page title */}
         <meta name="description" content="Description of the About page" /> {/* Set the page description */}
-        {/* You can add more meta tags as needed */}
+       
       </Head>
       <section className="slider_home relative">
         <Slider images={images} autoplayInterval={5000} />
       </section>
-      <section className="padding_y">
+      {/* <section className="padding_y">
         <BookingForm />
-      </section>
+      </section> */}
       <section className="padding_y">
         <Title title={tourTitle} subDescription="package" />
         <TourPackage />

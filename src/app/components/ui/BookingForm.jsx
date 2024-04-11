@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import PickUpLocation from "./PickUpLocation ";
 
 const BookingForm = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -28,6 +29,7 @@ const BookingForm = () => {
           dateFormat="MMMM d, yyyy h:mm aa"
           className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+        <PickUpLocation/>
       </div>
     </div>
   );
